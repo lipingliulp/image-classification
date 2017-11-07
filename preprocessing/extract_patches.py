@@ -77,6 +77,7 @@ def extract_patch(col_img):
 
     patch = patch[1:-1, 1:-1, :]
 
+
     return patch
 
 
@@ -116,6 +117,7 @@ for i in range(1, len(paths) + 1):
 
     # extract patch
     patch = extract_patch(col_img)
+    patch = scipy.misc.imresize(patch, [128, 128])
     
     # check the patch
 
